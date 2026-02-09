@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Downloader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #020617;
+      padding: 32px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.5);
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      text-align: center;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+    }
+    input, select {
+      background: #020617;
+      color: white;
+      border: 1px solid #334155;
+    }
+    button {
+      background: #6366f1;
+      color: white;
+      cursor: pointer;
+      margin-top: 16px;
+    }
+    button:hover {
+      background: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎬 YouTube Downloader</h1>
+    <form method="POST" action="/download">
+      <input type="text" name="url" placeholder="YouTube URL" required>
+      <select name="type">
+        <option value="both">비디오 + 오디오</option>
+        <option value="video">비디오만</option>
+        <option value="audio">오디오(MP3)</option>
+      </select>
+      <button type="submit">다운로드</button>
+    </form>
+  </div>
+</body>
+</html>
